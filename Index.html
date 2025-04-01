@@ -10,14 +10,14 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('background.png'); /* добавлен фон */
+            background-image: url('background.png');
             background-size: cover;
             color: #333;
             line-height: 1.6;
         }
 
         header {
-            background-color: rgba(0, 123, 255, 0.8); /* полупрозрачный фон для header */
+            background-color: rgba(0, 123, 255, 0.8);
             color: white;
             padding: 40px 20px;
             text-align: center;
@@ -52,7 +52,7 @@
         }
 
         .product-images img {
-            width: 300px; /* увеличены изображения */
+            width: 300px;
             height: 300px;
             margin: 15px 0;
             border-radius: 10px;
@@ -71,51 +71,75 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             margin: 10px;
             animation: slideUp 1.5s ease-out;
+           font-size: 1.5em;
         }
 
-        .product-description h1 {
-            font-size: 2.4em;
-            margin-bottom: 20px;
-            color: #007bff;
-        }
-
-        .product-description p {
-            font-size: 1.1em;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .product-description ul {
-            list-style-type: none;
-            padding: 0;
-            margin-bottom: 20px;
-        }
-
-        .product-description li {
-            font-size: 1.1em;
-            margin: 10px 0;
-            color: #333;
-        }
-
-        .payment-info, .contact-info {
-            margin-top: 40px;
+        .payment-info {
             text-align: center;
             padding: 25px;
-            background-color: transparent; /* прозрачный фон */
+            background-color: white;
             border-radius: 10px;
-            box-shadow: none; /* убран тень */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            max-width: 500px;
         }
 
-        .payment-info h2, .contact-info h2 {
+        .payment-info h2 {
             font-size: 2em;
             color: #007bff;
             margin-bottom: 20px;
         }
 
-        .payment-info p, .contact-info p {
+        .payment-info p {
             font-size: 1.2em;
             color: #555;
             margin-bottom: 20px;
+        }
+
+        .payment-info ul {
+            text-align: left;
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.1em;
+        }
+
+        .payment-info li {
+            margin-bottom: 10px;
+        }
+
+        .qr-code {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .payment-button, .contact-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-button:hover {
+            background-color: #218838;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
         }
 
         .contact-info a {
@@ -125,7 +149,7 @@
         }
 
         footer {
-            background-color: transparent; /* прозрачный фон */
+            background-color: transparent;
             color: white;
             padding: 20px;
             text-align: center;
@@ -135,29 +159,6 @@
         footer p {
             font-size: 1em;
             margin: 0;
-        }
-
-        .payment-button, .contact-button {
-            display: inline-block;
-            padding: 8px 18px;
-            margin-top: 20px;
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            font-size: 1em;
-            border-radius: 50px; /* закругленные кнопки */
-            transition: background-color 0.3s ease;
-        }
-
-        .payment-button:hover, .contact-button:hover {
-            background-color: #218838;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px; /* расстояние между кнопками */
-            margin-top: 30px;
         }
 
         @keyframes fadeIn {
@@ -179,7 +180,6 @@
                 opacity: 1;
             }
         }
-
     </style>
 </head>
 <body>
@@ -196,9 +196,9 @@
         <img src="nfc_sample3.jpg" alt="NFC метка 3">
     </div>
 
-    <div class="product-description">
+ <div class="product-description">
         <h1>Наши NFC метки</h1>
-        <p>Наши NFC метки — это идеальный инструмент для обмена информацией, контроля доступа и создания уникальных решений для бизнеса и мероприятий.</p>
+        <p>Наши NFC метки — это идеальный инструмент для обмена информацией, контроля доступа и создания уникальных решений.</p>
         <p><strong>Цена:</strong> 150 руб. за штуку.</p>
 
         <h2>Характеристики:</h2>
@@ -208,12 +208,6 @@
             <li><strong>Протокол:</strong> ISO14443A</li>
             <li><strong>Рабочая частота:</strong> 13,56 МГц</li>
             <li><strong>Расстояние чтения и записи:</strong> от 1 до 5 см</li>
-            <li><strong>Время считывания и записи:</strong> от 1 до 2 мс</li>
-            <li><strong>Рабочая температура:</strong> от -20 до 55 градусов, влажность 90%</li>
-            <li><strong>Время стирания:</strong> > 100000 раз</li>
-            <li><strong>Срок хранения данных:</strong> > 10 лет</li>
-            <li><strong>Время считывания:</strong> 100000 раз</li>
-            <li><strong>Диаметр:</strong> 25 мм / 1,02 дюйма (приблизительно)</li>
             <li><strong>Материалы:</strong> ПВХ</li>
         </ul>
     </div>
@@ -221,17 +215,27 @@
 
 <div class="payment-info">
     <h2>Оплата</h2>
-    <p>Для оплаты используйте карту: <strong>2200 7019 0355 1247</strong></p>
+    <p>Для оплаты переведите сумму на карту: <strong>2200 7019 0355 1247</strong></p>
+
+    <p>Отсканируйте QR-код для быстрого перевода:</p>
+    <img src="qr_code.png" alt="QR-код для оплаты" class="qr-code">
+
+    <p><strong>Как оплатить?</strong></p>
+    <ul>
+        <li>Откройте мобильное приложение вашего банка.</li>
+        <li>Выберите перевод по номеру карты.</li>
+        <li>Введите номер: <strong>2200 7019 0355 1247</strong>.</li>
+        <li>Введите сумму и подтвердите платеж.</li>
+    </ul>
+
+    <div class="button-container">
+        <a href="https://www.tinkoff.ru/rm/r_DptEIHEnxu.YrexbQsdcH/ivMu632496" class="payment-button">Оплатить</a>
+    </div>
 </div>
 
 <div class="contact-info">
     <h2>Нужна помощь?</h2>
     <p>Свяжитесь с нами через <a href="https://t.me/kavexss" target="_blank">Telegram @kavexss</a></p>
-</div>
-
-<div class="button-container">
-    <a href="2200 7019 0355 1247" class="payment-button">Оплатить</a>
-    <a href="https://t.me/kavexss" class="contact-button">Связаться через Telegram</a>
 </div>
 
 <footer>
