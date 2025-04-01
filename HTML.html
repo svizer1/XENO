@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XENO PRODUCTION - Продажа NFC меток</title>
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('background.png'); /* добавлен фон */
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(0, 123, 255, 0.8); /* полупрозрачный фон для header */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            font-weight: 600;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .product-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-out;
+            max-width: 300px;
+        }
+
+        .product-images img {
+            width: 300px; /* увеличены изображения */
+            height: 300px;
+            margin: 15px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-images img:hover {
+            transform: scale(1.1);
+        }
+
+        .product-description {
+            max-width: 600px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .product-description h1 {
+            font-size: 2.4em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .product-description p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .product-description ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .product-description li {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .payment-info, .contact-info {
+            margin-top: 40px;
+            text-align: center;
+            padding: 25px;
+            background-color: transparent; /* прозрачный фон */
+            border-radius: 10px;
+            box-shadow: none; /* убран тень */
+        }
+
+        .payment-info h2, .contact-info h2 {
+            font-size: 2em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .payment-info p, .contact-info p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: transparent; /* прозрачный фон */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .payment-button, .contact-button {
+            display: inline-block;
+            padding: 8px 18px;
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 50px; /* закругленные кнопки */
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-button:hover, .contact-button:hover {
+            background-color: #218838;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* расстояние между кнопками */
+            margin-top: 30px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpg" alt="Логотип">
+    <h1>XENO PRODUCTION - Продажа NFC меток</h1>
+</header>
+
+<div class="container">
+    <div class="product-images">
+        <img src="nfc_sample1.jpg" alt="NFC метка 1">
+        <img src="nfc_sample2.jpg" alt="NFC метка 2">
+        <img src="nfc_sample3.jpg" alt="NFC метка 3">
+    </div>
+
+    <div class="product-description">
+        <h1>Наши NFC метки</h1>
+        <p>Наши NFC метки — это идеальный инструмент для обмена информацией, контроля доступа и создания уникальных решений для бизнеса и мероприятий.</p>
+        <p><strong>Цена:</strong> 150 руб. за штуку.</p>
+
+        <h2>Характеристики:</h2>
+        <ul>
+            <li><strong>Чип:</strong> Ntag215</li>
+            <li><strong>Полезная емкость:</strong> 504 байта</li>
+            <li><strong>Протокол:</strong> ISO14443A</li>
+            <li><strong>Рабочая частота:</strong> 13,56 МГц</li>
+            <li><strong>Расстояние чтения и записи:</strong> от 1 до 5 см</li>
+            <li><strong>Время считывания и записи:</strong> от 1 до 2 мс</li>
+            <li><strong>Рабочая температура:</strong> от -20 до 55 градусов, влажность 90%</li>
+            <li><strong>Время стирания:</strong> > 100000 раз</li>
+            <li><strong>Срок хранения данных:</strong> > 10 лет</li>
+            <li><strong>Время считывания:</strong> 100000 раз</li>
+            <li><strong>Диаметр:</strong> 25 мм / 1,02 дюйма (приблизительно)</li>
+            <li><strong>Материалы:</strong> ПВХ</li>
+        </ul>
+    </div>
+</div>
+
+<div class="payment-info">
+    <h2>Оплата</h2>
+    <p>Для оплаты используйте номер телефона: <strong>+7 963 126 5019</strong></p>
+</div>
+
+<div class="contact-info">
+    <h2>Нужна помощь?</h2>
+    <p>Свяжитесь с нами через <a href="https://t.me/kavexss" target="_blank">Telegram @kavexss</a></p>
+</div>
+
+<div class="button-container">
+    <a href="tel:+79631265019" class="payment-button">Оплатить</a>
+    <a href="https://t.me/kavexss" class="contact-button">Связаться через Telegram</a>
+</div>
+
+<footer>
+    <p>&copy; 2025 XENO PRODUCTION. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
